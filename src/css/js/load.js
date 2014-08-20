@@ -1,10 +1,13 @@
 $(document).ready(function () {
     
     //set design settings
-    $('.bg').css('-webkit-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
-    $('.bg').css('-moz-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
-    $('.bg').css('-o-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
-    $('.bg').css('-ms-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
+    var blur = 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) + 'px)';
+    $('.bg')
+		.css('filter', blur)
+		.css('-webkit-filter', blur)
+		.css('-moz-filter', blur)
+		.css('-o-filter', blur)
+		.css('-ms-filter', blur);
     
     $('.bg').css('background-image', 'url( ' + config.backgroundImage + ' )');
     
