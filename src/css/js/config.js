@@ -11,5 +11,5 @@ var config = {
     
     //design settings
     backgroundBlur: 5,       //Applies a Gaussian blur to the input image. If no parameter is provided, then a value 0 is used. The parameter is specified as a CSS length, but does not accept percentage values.
-    backgroundImage: 'http://image.noelshack.com/fichiers/2012/23/1339001147-pyke.jpg'
+    backgroundImage: 'http://www.millenium.org/images/contenu/actus/minecraft/minecraft_render_mhm3d_eares_3_hd.jpg'
 };

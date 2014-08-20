@@ -2,6 +2,10 @@ $(document).ready(function () {
     
     //set design settings
     $('.bg').css('-webkit-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
+    $('.bg').css('-moz-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
+    $('.bg').css('-o-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
+    $('.bg').css('-ms-filter', 'blur(' + (config.backgroundBlur <= 0 || config.backgroundBlur == null ? 0 : config.backgroundBlur) +'px)');
+    
     $('.bg').css('background-image', 'url( ' + config.backgroundImage + ' )');
     
     //load the images and other information
