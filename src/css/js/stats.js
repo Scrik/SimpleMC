@@ -64,26 +64,43 @@ function SimpleMc() {
             */
 
         var playerList = [];
-        $.getJSON("test.html", function (data) {
+        
+        $.ajax({
+            type: 'POST',
+            url: 'inc/status.php',
+            data: {query: null, ip: serverIP, port: serverPORT},
+            async: false
+        }).done(function(data) {
+            var queryData = $.parseJSON(data);
 
-            $.each(data['players']['list'], function (k, v) {
+            $.each(queryData.players.list, function (k, v) {
                 playerList.push(v);
-            });
-
-
+            });            
         });
+        
         
         /*
             Get more server information
         */
         var serverInfo = [];
-        $.getJSON("test-info.html", function(data) {
-            
-            $.each(data, function(k, v) {
-                serverInfo.push(v); 
+        
+        $.ajax({
+            type: 'POST',
+            url: 'inc/status.php',
+            data: {info: null, ip: serverIP, port: serverPORT},
+            async: false
+        }).done(function(data) {
+        
+            var queryData = $.parseJSON(data);
+
+            $.each(queryData, function (k, v) {
+                serverInfo.push(v);
             });
-            
+      
         });
+        
+        console.log(serverInfo);
+        
         //---
         var i = 0;
 
@@ -132,7 +149,7 @@ function SimpleMc() {
                 
                 //more server information
                 if(i == 1) {
-                   
+                    console.log(serverInfo);
                     //title
                     document.title = serverName;
                     $('.server-header').text(serverName);    
@@ -140,7 +157,7 @@ function SimpleMc() {
                     if(serverInfo[1] == true) {
                         
                         //set player
-                        $('#count-player').text(serverInfo[4]['currently'] + '/' + serverInfo[4]['max']);
+                        $('#count-player').text(serverInfo[4].currently + '/' + serverInfo[4].max);
                         
                         //set tatus
                         $('#server-status').removeClass('offline');

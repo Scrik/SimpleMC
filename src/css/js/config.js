@@ -4,7 +4,7 @@
 var config = {
     //important settings
     name: 'CakeMine',       //Your Server-Name
-    host: 'cakeminet.net',  //Your Server-IP
+    host: 'cakemine.net',  //Your Server-IP
     port: 25565,            //Your Server Port the default one is '25565
     refresh: 30,            //in seconds (recommend 30 because the script needs time to load all images and the other stuff at the first time)
     displayAvatars: 50,     //the page only will load 50 avatars
