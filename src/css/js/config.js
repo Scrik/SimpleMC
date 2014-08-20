@@ -9,6 +9,16 @@ var config = {
     refresh: 30,            //in seconds (recommend 30 because the script needs time to load all images and the other stuff at the first time)
     displayAvatars: 50,     //the page only will load 50 avatars
     
+    showPing: true, //Shows the ping box
+    showStatus: true, //Shows the status box
+    showPlayer: true, //Shows the player-counter-box
+    showVersion: true, //Shows the version-box
+    
+    showFavicon: true, //Shows the server favicon
+    customFavicon: false,
+    customFaviconLink: 'https://cdn1.iconfinder.com/data/icons/cat-force/128/cat_sleep.png', //The link to your custom favicon
+    
     //design settings
     backgroundBlur: 5,       //Doesn't work in this version. I will fix it soon. || Applies a Gaussian blur to the input image. If no parameter is provided, then a value 0 is used. The parameter is specified as a CSS length, but does not accept percentage values.
-    backgroundImage: 'http://www.millenium.org/images/contenu/actus/minecraft/minecraft_render_mhm3d_eares_3_hd.jpg'};
+    backgroundImage: 'http://www.millenium.org/images/contenu/actus/minecraft/minecraft_render_mhm3d_eares_3_hd.jpg'
+};

@@ -165,8 +165,9 @@ function SimpleMc() {
                         $('#server-status').text('online');
                         
                         //favicon
-                        $('.favicon').attr('src', serverInfo[5]['favicon']);
-                        $('.favicon-icon').attr('href', serverInfo[5]['favicon']);
+                        var linkToFavicon = (config.customFavicon == true ? config.customFaviconLink : serverInfo[5]['favicon']);
+                        $('.favicon').attr('src', linkToFavicon);
+                        $('.favicon-icon').attr('href', linkToFavicon);
                         
                         //motd
                         $('.motd-status').text(serverInfo[5]['motd'][0]);
@@ -227,6 +228,29 @@ function SimpleMc() {
         }
         $(loadAvatars);
         clearInterval(loadingID); //hide the "Loading..." message after the work is done  
+        
+        //hide some boxes
+        
+        if(config.showPing == true) {
+            $('#server-ping').show();
+        }
+        
+        if(config.showStatus == true) {
+            $('#server-status').show();
+        }
+        
+        if(config.showVersion == true) {
+            $('#server-version').show();
+        }
+        
+        if(config.showPlayer == true) {
+            $('#count-player').show();
+        }
+        
+        if(config.showFavicon == true) {
+            $('.favicon').show();
+        }
+        
     };
 
 }
