@@ -1,5 +1,5 @@
 //Please edit all values!
-//Don't remove my credits at the end of page! - This is script is free.
+//Don't remove my credits at the end of page! - This script is free.
 
 var config = {
     //important settings
