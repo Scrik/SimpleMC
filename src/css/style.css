@@ -1,0 +1,240 @@
+* { margin: 0; padding: 0; border: 0; outline: 0; }
+
+body {
+	color: #fff;
+	font-family: 'Source Sans Pro', 'Helvetica', Arial, sans-serif;
+	width: 100%;
+	background: #232c31;	
+    overflow-x: hidden;
+}
+
+.bg {
+	background-image: url('img/minecraft-14781-2880x1800.jpg') no-repeat;
+	opacity: 1;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.content {
+	margin: 0 auto;
+	padding: 110px 10px 0 10px;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+.content h1 {
+	color: #fff;
+	font: 3em 'Pacifico', cursive;
+	cursor: default;
+}
+
+.desc {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	margin: 15px auto;
+    max-width: 100%;
+}
+
+.desc a {
+	color: #FFF;
+}
+
+.desc a:hover {
+	text-decoration: none;
+}
+
+.buttons a {
+    color: #FFF;
+	display: inline-block;
+	border: 2px solid #fff;
+	width: 125px;
+	font-size: 14px;
+	font-family: 'Montserrat', 'Helvetica', Arial, sans-serif;
+	font-weight: 700;
+	line-height: 21px;
+	padding: 8px 0;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	vertical-align: top;
+	margin: 10px;
+	-webkit-transition: all .3s ease-in;
+}
+
+.buttons {
+    background: transparent;
+	margin: 30px auto;
+}
+
+.buttons a.status.online {
+	color: #2BAF2b;
+}
+
+.buttons a.status.offline {
+    color: #E84E40;
+}
+
+.buttons a.player {
+    color: #FFF
+}
+
+.buttons a.version {
+    color: #FFF;
+    position: sticky;
+}
+
+.buttons a.ping {
+    color: #FFF;
+    position: sticky;
+}
+
+.buttons a.ping.bad {
+    color: #E84E40;
+}
+
+.buttons a.ping.normal {
+     color: #E2DB00;   
+}
+
+.buttons a.ping.good {
+     color: #2BAF2b;   
+}
+
+.corner-link {
+	display: block;
+	position: absolute;
+	top: 3em;
+	right: -6.5em;
+	padding: 1em;
+	width: 20em;
+	text-align: center;
+	background-color: #00465C;
+	text-transform: uppercase;
+	font-size: .7em;
+	color: white;
+	letter-spacing: 1px;
+	text-decoration: none;
+	white-space: nowrap;
+	cursor: pointer;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+	-webkit-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+
+.hr {
+	height: 1px;
+	width: auto;
+    max-width: 1200px;  
+	margin: 15px auto;
+	background: #FFF;
+	position: relative;
+	z-index: 10;
+}
+
+.socials {
+	text-align: center;
+	margin:10px 0;
+	z-index: 10;
+}
+
+.footer {
+	font-weight: 300;
+	text-align: center;
+	margin:10px 0;
+	z-index: 10;
+	font-size:11px;
+	position: absolute;
+	bottom:0;
+	width:100%;
+}
+
+.footer .link {
+	display: inline-block;
+	background: transparent;
+	color: #FFF;
+	font: 1em 'Montserrat', 'Helvetica', Arial, sans-serif;
+	
+	vertical-align: text-top;
+	text-decoration: none;
+}
+
+.avatars {
+ 	font-size: 16px;
+	font-weight: 300;
+	line-height: 22px;
+	margin: 15px auto;
+	max-width: 1200px;   
+    height: 400px;
+    max-height: 100%;
+    overflow: hidden;
+    text-overflow: hidden;
+}
+
+.list {
+    width: 100%;   
+    max-width: 1150px;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+
+.avatar {
+    display: inline;
+}
+
+.avatar img {
+    margin-left: 5px;
+    border: 2px solid #FFF;
+    width: 60px;
+    height: 60px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    border-radius: 80px;
+}
+
+.favicon {
+    width: 64px;
+    height: 64px;
+    -webkit-border-radius: 64px;
+    -moz-border-radius: 64px;
+    border-radius: 64px;
+    border: 4px solid #FFF;
+}
+
+@media (max-device-width: 680px){
+	
+    BODY {
+        background: #232c31;
+	     background-position:top center;
+	     background-repeat: no-repeat;
+	     background-attachment:fixed;
+	     background-size: auto 100%;
+  }
+  
+  .bg {
+    display: none;
+  }
+  
+  .footer {
+	  position:relative;
+  }
+}
